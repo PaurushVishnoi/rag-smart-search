@@ -1,6 +1,6 @@
-# 📘 Retrieval-Augmented Generation (RAG) — Concepts
+# Retrieval-Augmented Generation (RAG) — Concepts
 
-## 🧠 What is RAG?
+## What is RAG?
 RAG stands for **Retrieval-Augmented Generation**.
 
 It is a technique where a generative AI model (like an LLM) is given the ability to look up extra information from an external data source before answering a question.
@@ -15,7 +15,7 @@ With RAG, the model can also **search a knowledge base**, find relevant informat
 
 ---
 
-## ❓ Why is RAG Needed?
+## Why is RAG Needed?
 
 Without RAG, a language model might:
 - Give **wrong information**
@@ -33,7 +33,7 @@ Without RAG, a language model might:
 
 ---
 
-## 📏 But Aren’t Modern LLMs Able to Handle Long Prompts?
+## But Aren’t Modern LLMs Able to Handle Long Prompts?
 Yes — today’s models can handle **128,000+ tokens** (around 96,000 words).  
 However, there are still major limitations:
 
@@ -64,7 +64,7 @@ RAG solves these problems by:
 
 ---
 
-## 🔄 How RAG Works (Simple Steps)
+## How RAG Works (Simple Steps)
 
 The following diagram illustrates the RAG process for a basic RAG system. This diagram represents the core concept well, as all variations of RAG rely on the same main idea shown here:
 
@@ -127,7 +127,7 @@ This results in **more accurate and trustworthy answers**.
 
 ---
 
-## ✅ Summary
+## Summary
 RAG improves AI responses by giving models access to external information.  
 It helps reduce errors, avoid hallucinations, lower costs, and ensure answers are backed by real data.
 
