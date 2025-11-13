@@ -5,21 +5,31 @@
 A lightweight RAG system that pulls content from Notion, builds a vector database with Chroma, and answers questions using GPT.
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![OpenAI](https://img.shields.io/badge/OpenAI-API-412991)
 ![Chroma](https://img.shields.io/badge/ChromaDB-Vector%20Search-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
 ![Notion](https://img.shields.io/badge/Notion-API-black)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+
+
 
 </div>
 
 #  Vector Search with RAG
 
-A simple tool that connects to Notion, turns your company documents into a searchable vector database using Chroma, and lets you ask questions through a Streamlit chat interface. Employees can quickly find information from policies and internal guides using natural language.
+A lightweight tool that connects to Notion, pulls in your company docs—like Onboarding Process, Meeting Policy, or Work-From-Home Guidelines—and transforms them into a searchable vector database using Chroma.
+
+Employees can then ask questions in a friendly Streamlit chat interface:
+
+“How do I request vacation time?”
+“What’s our meeting-free Friday policy?”
+“Where do I find the onboarding checklist?”
+"Can you please code function of the new functionality for Impressions on Budget page ?"
+
+The system understands natural language and instantly surfaces the right information from your internal guides and policies—no more digging through your comopany's confluence pages, github repos or Notion tabs.
 
 ---
 
 ## 📘 Table of Contents
-- [ Vector Search with RAG](#-vector-search-with-rag)
 - [ Chapter 1 — What Is RAG?](#-chapter-1--what-is-rag)
 - [ Chapter 2 — What Is a Vector Database?](#-chapter-2--what-is-a-vector-database)
 - [ Chapter 3 — Why Use RAG?](#-chapter-3--why-use-rag)
@@ -54,7 +64,8 @@ This makes answers accurate, up-to-date, and grounded in your real data.
 **With RAG:**  
 GPT finds the right text from your company documents and answers based on that.
 
-Here is the detailed concepts for RAG [RAG and its concepts](./docs/xys_app.md)
+Here is the detailed concepts for RAG : [RAG and its concepts](./docs/RAG_concept.md)
+
 ---
 
 # Chapter 2 — What Is a Vector Database?
