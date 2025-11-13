@@ -64,7 +64,7 @@ This makes answers accurate, up-to-date, and grounded in your real data.
 **With RAG:**  
 GPT finds the right text from your company documents and answers based on that.
 
-Here is the detailed concepts for RAG : [RAG and its concepts](./docs/03_RAG_concept.md)
+Here is the detailed concept for RAG : [RAG and its concepts](./docs/03_RAG_concept.md)
 
 ---
 
@@ -86,3 +86,7 @@ db = Chroma.from_texts(texts, embeddings)
 results = db.similarity_search("What is the smoking rule?")
 print(results[0].page_content)
 ```
+
+Here is the detailed concept for Vecotr database : [Vector databases and Metadata filtering](./docs/02_vector_database.md)
+
+---
