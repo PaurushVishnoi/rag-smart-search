@@ -64,7 +64,7 @@ This makes answers accurate, up-to-date, and grounded in your real data.
 **With RAG:**  
 GPT finds the right text from your company documents and answers based on that.
 
-Here is the detailed concepts for RAG : [RAG and its concepts](./docs/RAG_concept.md)
+Here is the detailed concepts for RAG : [RAG and its concepts](./docs/03_RAG_concept.md)
 
 ---
 
