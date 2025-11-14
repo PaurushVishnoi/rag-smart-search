@@ -89,7 +89,7 @@ Once done, your integration will have access to:
 - The root **All documents** page  
 - All its subpages (e.g., Company Policy, Onboarding Processes, etc.)
 
-### Step 7 — Test Your Access
+### Step 5  — Test Your Access
 
 To quickly test the connection, create a **test.py** with following code in your folder and run it :
 

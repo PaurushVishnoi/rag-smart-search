@@ -199,7 +199,7 @@ Make sure you have the following:
   ```bash
   python --version
   ```
-  
+
 - Access to **Open AI** API key . In case you dont have one, create an API key from your OpenAI dashboard.
 ```
 Login to Open AI -> https://platform.openai.com/settings/profile/api-keys
@@ -214,6 +214,8 @@ OPENAI_API_KEY=sk-your-key-here
 ```
 Tip: Never commit your key. .env is git-ignored.
 
+---
+
 ### Integration with Notion Documents 
 
 I have already provided some demo documents which you can use for this app. Please follow the following link to setup your account ( in case you don't have one ) and integrate with the documents. 
@@ -221,6 +223,8 @@ I have already provided some demo documents which you can use for this app. Plea
 [Notion Setup](./docs/01_notion_setup.md)
 
 It will take hardly 5 mins.
+
+---
 
 ### Clone the Repository
 
@@ -230,6 +234,7 @@ Run the following commands:
 git clone https://github.com/PaurushVishnoi/rag-smart-search.git
 cd rag-notion-app
 ```
+---
 
 ### Install Dependencies
 
@@ -247,6 +252,7 @@ This will install:
 - OpenAI integration
 - python-dotenv and other 
 
+---
 
 ### Create the .env File
 
