@@ -32,14 +32,11 @@ The system understands natural language and instantly surfaces the right informa
 ## 📘 Table of Contents
 - [ Chapter 1 — What Is RAG?](#-chapter-1--what-is-rag)
 - [ Chapter 2 — What Is a Vector Database?](#-chapter-2--what-is-a-vector-database)
-- [ Chapter 3 — What This Project Does](#-chapter-4--what-this-project-does)
-- [ Chapter 4 — How It Works (Sequence Diagram)](#-chapter-5--how-it-works-sequence-diagram)
-- [ Chapter 5 — Setting Up Notion](#-chapter-6--setting-up-notion)
-- [ Chapter 6 — The Streamlit App](#-chapter-8--the-streamlit-app)
-- [ Chapter 7 — Architecture](#-chapter-9--architecture)
-- [ Chapter 8 — Setup](#️-chapter-10--setup)
-- [ Chapter 9 — Example Queries](#-chapter-11--example-queries)
+- [ Chapter 3 — What This Project Does](#-chapter-3--what-this-project-does)
+- [ Chapter 4 — Setup and Installation)](#-chapter-4--setup-and-installation)
+- [ Chapter 5 — Run the Application](#-chapter-5--run-the-application)
 - [ Chapter 10 — Deployment](#-chapter-12--deployment)
+- [ Chapter 11 — Setting Up Notion](#-chapter-6--setting-up-notion)
 
 ---
 
@@ -181,4 +178,131 @@ It then generates embeddings, stores them in a vector database, and provides an 
 </div>
 
 
+Here is a detailed Sequence diagram fo how the workflow looks like in the app level :-
 
+![Sequence Diagram](./docs/images/Sq_diagram.png)
+
+---
+
+# Chapter 4 — Setup & Installation
+
+Follow these steps to get the app running from scratch.
+
+### Prerequisites
+
+Make sure you have the following:
+
+- **Python 3.10+**  
+  Check your version with:  
+  ```bash
+  python --version
+  ```
+  
+- Access to **Open AI** API key . In case you dont have one, create an API key from your OpenAI dashboard.
+```
+Login to Open AI -> https://platform.openai.com/settings/profile/api-keys
+
+Click "+ Create a new secret key" -> Name your key for e.g.:- "My demo key" -> Copy the generated key 
+
+This key will be used to be pasted in .env file
+```
+In the project root, create a .env file and this one line **( Just replace "sk-your-key-here" with your generated key , just paste it as it is no need to use "")**:
+```
+OPENAI_API_KEY=sk-your-key-here
+```
+Tip: Never commit your key. .env is git-ignored.
+
+
+### Clone the Repository
+
+Run the following commands:
+
+```bash
+git clone https://github.com/PaurushVishnoi/rag-smart-search.git
+cd rag-notion-app
+```
+
+### Install Dependencies
+
+From the project root, install all required packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+This will install:
+
+- Notion client
+- LangChain + Chroma
+- Streamlit
+- OpenAI integration
+- python-dotenv and other 
+
+
+### Create the .env File
+
+In the project folder, i.e. after you clone the root folder will be /rag-smart-search, create a file named .env and add the following content:
+
+```env
+
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx ( your generated Open AI api key )
+NOTION_TOKEN=ntn_518xxxxxxxxxxxxxxxxxxxxx
+ROOT_PAGE_ID=2a7c1491954780dc86c8f962736e0a14 ( I am providing this as public access to the pages )
+```
+
+# Chapter 5 — Run the Application
+
+Start the Streamlit app:
+
+```bash
+streamlit run query_engine.py
+```
+
+On the first run, the app will:
+
+- Detect that no vector database exists yet (the `db/` folder is empty or missing)
+- Connect to Notion using:
+  - `NOTION_TOKEN`
+  - `ROOT_PAGE_ID`
+- Fetch all child pages (e.g., Company Policy, Onboarding Processes, etc.)
+- Chunk the text and generate embeddings
+- Create a local vector database under `./db`
+- Launch the web UI in your browser
+
+You should see something like:
+
+![Application main page](./docs/images/Streamlit_mainPage.png)
+
+### Ask Your First Question
+
+In the chat input at the bottom, try questions like:
+
+- *What is our smoking policy?*  
+- *How can I apply for annual leave?*  
+- *What is the onboarding process for a new employee?*
+
+The app will:
+
+- Retrieve relevant chunks from your Notion content (via the vector database)
+- Pass them to GPT using a structured prompt
+- Return a clean, structured answer
+- Display **Sources** (e.g., company policy, onboarding process, etc.)
+
+### Rebuilding / Updating the Knowledge Base (Optional)
+
+If you update your Notion pages and want to refresh the knowledge base, you have two options:
+
+#### **Option A — Rebuild manually**
+Run the builder script:
+
+```bash
+python rag_builder.py
+```
+
+#### **Option B — Delete the db/ folder and just run the app again:**
+
+```bash
+rm -rf db streamlit run query_engine.py
+```
+
+The app will rebuild the database automatically on startup.

@@ -1,0 +1,9 @@
+python-dotenv
+notion-client
+langchain
+langchain-community
+langchain-openai
+langchain-text-splitters
+chromadb
+streamlit
+tiktoken
