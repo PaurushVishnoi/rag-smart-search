@@ -188,6 +188,8 @@ Here is a detailed Sequence diagram fo how the workflow looks like in the app le
 
 Follow these steps to get the app running from scratch.
 
+
+
 ### Prerequisites
 
 Make sure you have the following:
@@ -212,6 +214,13 @@ OPENAI_API_KEY=sk-your-key-here
 ```
 Tip: Never commit your key. .env is git-ignored.
 
+### Integration with Notion Documents 
+
+I have already provided some demo documents which you can use for this app. Please follow the following link to setup your account ( in case you don't have one ) and integrate with the documents. 
+
+[Notion Setup](./docs/01_notion_setup.md)
+
+It will take hardly 5 mins.
 
 ### Clone the Repository
 
