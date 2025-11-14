@@ -62,7 +62,7 @@ This makes answers accurate, up-to-date, and grounded in your real data.
 **With RAG:**  
 GPT finds the right text from your company documents and answers based on that.
 
-![RAG Concept](./images/RAG_pipeline.png)
+![RAG Concept](./docs/images/RAG_pipeline.png)
 
 Here is the detailed concept for RAG : [RAG and its concepts](./docs/03_RAG_concept.md)
 
@@ -88,9 +88,97 @@ results = db.similarity_search("What is the smoking rule?")
 print(results[0].page_content)
 ```
 
-![Vector Concept](./images/Vectors.png)
+![Vector Concept](./docs/images/Vectors.png)
 
 
 Here is the detailed concept for Vecotr database : [Vector databases and Metadata filtering](./docs/02_vector_database.md)
 
 ---
+
+# Chapter 3 — What This Project Does
+
+This project connects directly to your Notion pages (such as **Company Policy** or **Onboarding Process**) using the Notion API.  
+It then generates embeddings, stores them in a vector database, and provides an interactive **Streamlit chat interface** for querying your knowledge base.
+
+---
+
+##  Features
+
+- Connects to live Notion content via API  
+- Automatically builds and updates a vector database  
+- Produces structured, well-formatted answers using GPT  
+- Clean and intuitive Streamlit chat interface  
+- Easy to deploy — runs with a single command
+
+## Project Architecture
+
+
+<div style="font-family: Arial, sans-serif;">
+
+  <div style="
+      padding: 10px 20px;
+      border: 2px solid #4a90e2;
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 6px;
+      font-weight: bold;
+  ">
+    User
+  </div>
+
+  <div style="font-size: 20px; text-align: center;">↓</div>
+
+  <div style="
+      padding: 10px 20px;
+      border: 2px solid #4a90e2;
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 6px;
+      font-weight: bold;
+  ">
+    Streamlit App (query_engine.py)
+  </div>
+
+  <div style="font-size: 20px; text-align: center;">↓</div>
+
+  <div style="
+      padding: 10px 20px;
+      border: 2px solid #4a90e2;
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 6px;
+      font-weight: bold;
+  ">
+    Vector DB (Chroma)
+  </div>
+
+  <div style="font-size: 20px; text-align: center;">↓</div>
+
+  <div style="
+      padding: 10px 20px;
+      border: 2px solid #4a90e2;
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 6px;
+      font-weight: bold;
+  ">
+    LLM (GPT-4 / GPT-5)
+  </div>
+
+  <div style="font-size: 20px; text-align: center;">↓</div>
+
+  <div style="
+      padding: 10px 20px;
+      border: 2px solid #4a90e2;
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 6px;
+      font-weight: bold;
+  ">
+    Structured, Sourced Answer
+  </div>
+
+</div>
+
+
+
