@@ -32,16 +32,14 @@ The system understands natural language and instantly surfaces the right informa
 ## 📘 Table of Contents
 - [ Chapter 1 — What Is RAG?](#-chapter-1--what-is-rag)
 - [ Chapter 2 — What Is a Vector Database?](#-chapter-2--what-is-a-vector-database)
-- [ Chapter 3 — Why Use RAG?](#-chapter-3--why-use-rag)
-- [ Chapter 4 — What This Project Does](#-chapter-4--what-this-project-does)
-- [ Chapter 5 — How It Works (Sequence Diagram)](#-chapter-5--how-it-works-sequence-diagram)
-- [ Chapter 6 — Setting Up Notion](#-chapter-6--setting-up-notion)
-- [ Chapter 7 — How ChromaDB Works](#-chapter-7--how-chromadb-works)
-- [ Chapter 8 — The Streamlit App](#-chapter-8--the-streamlit-app)
-- [ Chapter 9 — Architecture](#-chapter-9--architecture)
-- [ Chapter 10 — Setup](#️-chapter-10--setup)
-- [ Chapter 11 — Example Queries](#-chapter-11--example-queries)
-- [ Chapter 12 — Deployment](#-chapter-12--deployment)
+- [ Chapter 3 — What This Project Does](#-chapter-4--what-this-project-does)
+- [ Chapter 4 — How It Works (Sequence Diagram)](#-chapter-5--how-it-works-sequence-diagram)
+- [ Chapter 5 — Setting Up Notion](#-chapter-6--setting-up-notion)
+- [ Chapter 6 — The Streamlit App](#-chapter-8--the-streamlit-app)
+- [ Chapter 7 — Architecture](#-chapter-9--architecture)
+- [ Chapter 8 — Setup](#️-chapter-10--setup)
+- [ Chapter 9 — Example Queries](#-chapter-11--example-queries)
+- [ Chapter 10 — Deployment](#-chapter-12--deployment)
 
 ---
 
@@ -64,6 +62,8 @@ This makes answers accurate, up-to-date, and grounded in your real data.
 **With RAG:**  
 GPT finds the right text from your company documents and answers based on that.
 
+![RAG Concept](./images/RAG_pipeline.png)
+
 Here is the detailed concept for RAG : [RAG and its concepts](./docs/03_RAG_concept.md)
 
 ---
@@ -72,6 +72,7 @@ Here is the detailed concept for RAG : [RAG and its concepts](./docs/03_RAG_conc
 
 A vector database stores text as **embeddings** — mathematical representations of meaning.  
 This allows the system to search by *meaning*, not keywords.
+
 
 ### Simple Example
 
@@ -86,6 +87,9 @@ db = Chroma.from_texts(texts, embeddings)
 results = db.similarity_search("What is the smoking rule?")
 print(results[0].page_content)
 ```
+
+![Vector Concept](./images/Vectors.png)
+
 
 Here is the detailed concept for Vecotr database : [Vector databases and Metadata filtering](./docs/02_vector_database.md)
 
