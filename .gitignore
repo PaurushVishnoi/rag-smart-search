@@ -1,0 +1,62 @@
+# ----------------------
+# Python
+# ----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+.DS_Store
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Jupyter artifacts
+.ipynb_checkpoints/
+
+# ----------------------
+# Environment variables
+# ----------------------
+.env
+.env.local
+.env.*.local
+
+# ----------------------
+# Streamlit cache
+# ----------------------
+.streamlit/
+**/.streamlit/
+
+# ----------------------
+# Vector Database (Chroma)
+# ----------------------
+db/
+chroma/
+chroma_cache/
+index/
+index_cache/
+
+# ----------------------
+# Logs
+# ----------------------
+*.log
+logs/
+
+# ----------------------
+# Operating System files
+# ----------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------------
+# Editor & IDE folders
+# ----------------------
+.vscode/
+.idea/
+*.swp
+*.swo

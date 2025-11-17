@@ -176,6 +176,7 @@ It then generates embeddings, stores them in a vector database, and provides an 
   </div>
 
 </div>
+<br></br>
 
 
 Here is a detailed Sequence diagram fo how the workflow looks like in the app level :-
