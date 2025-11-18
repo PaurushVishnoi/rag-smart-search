@@ -33,7 +33,7 @@ def chunk_documents(documents):
 
 
 # 3. Build vector store
-def build_vector_store(chunks):
+def build_vector_store(chunks, persist_dir="db"):
     embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
     texts = [c["text"] for c in chunks]
     metadatas = [c["metadata"] for c in chunks]
@@ -42,10 +42,10 @@ def build_vector_store(chunks):
         texts=texts,
         embedding=embeddings,
         metadatas=metadatas,
-        persist_directory="db",
+        persist_directory=persist_dir,
         collection_name="company_docs"
     )
 
     vectordb.persist()
-    print("Vector store built and saved at ./db")
+    print(f"Vector store built and saved at {persist_dir}")
 
