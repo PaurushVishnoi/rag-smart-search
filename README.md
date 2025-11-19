@@ -265,7 +265,7 @@ In the project folder, i.e. after you clone the root folder will be /rag-smart-s
 ```env
 
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx # ( your generated Open AI api key )
-NOTION_TOKEN=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 #( I am providing this as public access to the pages )
+NOTION_TOKEN=ntn_xxxxxxxxxxxxxxxxxxxxxxxxx #( replce xxx.... with  this 5188469280736SlSebseszyIVl46xmh8O5vitXHqnPt8sl )
 ROOT_PAGE_ID=2a7c1491954780dc86c8f962736e0a14 #( I am providing this as public access to the pages )
 ```
 
