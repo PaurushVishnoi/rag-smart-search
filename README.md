@@ -219,10 +219,10 @@ Tip: Never commit your key. .env is git-ignored.
 
 I have already provided some demo documents which you can use for this app. Please follow the following link to setup your account ( in case you don't have one ) and integrate with the documents. 
 
+Note : You can use Confluence links if in case you have access to ( In case your company would probably agree to use this project )
+
 [Notion Setup](./docs/01_notion_setup.md)
 
-
-Note : You can use Confluence links if in case you have access to ( In case your company would probably agree to use this project )
 ---
 
 ### Clone the Repository
