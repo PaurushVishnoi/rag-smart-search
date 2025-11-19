@@ -35,8 +35,6 @@ The system understands natural language and instantly surfaces the right informa
 - [ Chapter 3 — What This Project Does](#-chapter-3--what-this-project-does)
 - [ Chapter 4 — Setup and Installation)](#-chapter-4--setup-and-installation)
 - [ Chapter 5 — Run the Application](#-chapter-5--run-the-application)
-- [ Chapter 10 — Deployment](#-chapter-12--deployment)
-- [ Chapter 11 — Setting Up Notion](#-chapter-6--setting-up-notion)
 
 ---
 
@@ -219,12 +217,17 @@ Tip: Never commit your key. .env is git-ignored.
 
 ### Integration with Notion Documents 
 
-I have already provided some demo documents which you can use for this app. Please follow the following link to setup your account ( in case you don't have one ) and integrate with the documents. 
+I have already provided some demo documents which you can use for this app. Please follow the following link to setup your account ( in case you don't have one ) and integrate with the documents in case you want to create your own Notion Space. 
 
 [Notion Setup](./docs/01_notion_setup.md)
 
-It will take hardly 5 mins.
+Although , to run this project , you do not need any tokens as i have provided one to use ( You will find it later in creating .eny section )
 
+These are the pages been used in this project.
+*https://www.notion.so/All-documents-2a7c1491954780dc86c8f962736e0a14**
+
+
+Note : You can use Confluence links if in case you have access to ( In case your company would probably agree to use this project )
 ---
 
 ### Clone the Repository
@@ -261,9 +264,9 @@ In the project folder, i.e. after you clone the root folder will be /rag-smart-s
 
 ```env
 
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx ( your generated Open AI api key )
-NOTION_TOKEN=ntn_518xxxxxxxxxxxxxxxxxxxxx
-ROOT_PAGE_ID=2a7c1491954780dc86c8f962736e0a14 ( I am providing this as public access to the pages )
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx # ( your generated Open AI api key )
+NOTION_TOKEN=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 #( I am providing this as public access to the pages )
+ROOT_PAGE_ID=2a7c1491954780dc86c8f962736e0a14 #( I am providing this as public access to the pages )
 ```
 
 # Chapter 5 — Run the Application
