@@ -38,7 +38,16 @@ Even though the page is public, the API only works with authenticated users.
    - Apple ID  
 3. A new workspace will be created for you.  
 
-You do **not** need to recreate the documents — you’ll simply reference the public page.
+Create a new page named "All Documents"
+
+Note : this will be your `ROOT_PAGE_ID` which you will use in the `.env` file 
+
+![Root page ID](./images/Root_page_ID.png)
+
+Create two new pages 
+
+1. "company policy" and copy the content https://www.notion.so/company-policy-2a7c1491954780edb7aef79cae25438d
+2. "Onboarding process" and copy the content https://www.notion.so/Onboarding-processes-2a7c149195478053ab29dcb72e5a6566
 
 ---
 
@@ -68,18 +77,14 @@ Even though the page is public, the Notion API **cannot** read public pages unle
 
 To do this:
 
-1. Open the page:  
-   **https://www.notion.so/All-documents-2a7c1491954780dc86c8f962736e0a14**
+Go to your created Integration Access tab
 
-2. Click **Share** (top-right)
+![Access tab](./images/Access_to_page2.png)
 
-3. Click **Invite**
+Give the access to your page created.
 
-4. Search for the name of your integration
+![Access to page](./images/Access_to_page.png)
 
-5. Set permissions to **Can read**
-
-6. Click **Invite**
 
 You’re **not** sharing the page with a person —  
 you’re sharing it with your **internal API integration**.
